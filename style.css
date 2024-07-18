@@ -8,6 +8,11 @@ body {
     align-items: center;
 }
 
+h2 {
+    color: blue;
+}
+
+/* CLASSES */
 .container {
     display: flex;
     border: 8px solid rgba(234, 223, 108, 0.811);
@@ -19,11 +24,6 @@ body {
 .divStyle {
     border: 2px solid blue;
     flex: 1 0 25%;
-    /* 
-    width: 33.33333%;
-    flex: 1;
-    */
-    
 
     /*Style the text inside each div */
     color: blue;
@@ -36,4 +36,17 @@ body {
 
 .divStyle:hover {
     background-color: turquoise;
+}
+
+.newGridBtn {
+    color: blue;
+    padding: 10px 13px;
+    margin: 10px 5px;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+.newGridBtn:hover {
+    cursor: pointer;
+    background-color: rgba(234, 223, 108, 0.811);
 }
