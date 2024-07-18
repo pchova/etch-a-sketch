@@ -10,9 +10,23 @@ btn.textContent = "NEW GRID";
 btn.classList.add("newGridBtn");
 btnContainer.appendChild(btn);
 
+/* EVENT LISTENERS */
+btn.addEventListener("click", () => {
+    while (container.hasChildNodes()) {
+        container.removeChild(container.firstChild);
+    }
+
+    let userNum = prompt("Please type a number to make a new grid!");
+
+    createDiv(userNum);
+    
+});
+
 /* CLASSES */
-function createDiv() {
-    for (let i = 1; i <= numOfDivs; i++) {
+function createDiv(x) {
+    let divs = x;
+
+    for (let i = 1; i <= divs; i++) {
         const newDiv = document.createElement('div');
         newDiv.textContent = i;
         newDiv.setAttribute('class', 'divStyle');
@@ -20,4 +34,4 @@ function createDiv() {
     }
 }
 
-createDiv();
+createDiv(numOfDivs);
