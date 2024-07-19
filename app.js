@@ -48,13 +48,40 @@ function createDiv(x) {
             const divRow = document.createElement("div");
             divRow.classList.add("divRowStyle");
             divCol.appendChild(divRow);
+
+            divRow.addEventListener("mouseover", () => {
+                divRow.style.cssText = "background-color: lightblue;";
+            });
         }
 
         container.appendChild(divCol);
     }
 }
 
+
+
 createDiv(numOfDivs);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* createDiv(x) function attemp #2
 const cellSize = (container.offSetWidth - 10) / x;
