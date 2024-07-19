@@ -12,14 +12,29 @@ btnContainer.appendChild(btn);
 
 /* EVENT LISTENERS */
 btn.addEventListener("click", () => {
+    let userNum = prompt("Please type a number to make a new grid!");
+
     while (container.hasChildNodes()) {
         container.removeChild(container.firstChild);
     }
-
-    let userNum = prompt("Please type a number to make a new grid!");
-
-    createDiv(userNum);
     
+    while (userNum > 100 || userNum <= 0 || isNaN(userNum)) {
+        if (isNaN(userNum)) {
+            while (isNaN(userNum)) {
+                userNum = prompt("No special characters or letters. Please type a number.");
+            }
+        } 
+        
+        if (userNum > 100 || userNum <= 0) {
+            while (userNum > 100 || userNum <= 0) {
+                userNum = prompt("Please type a number between 1-100.");
+            }
+        }
+    }
+
+    if (userNum <= 100 && userNum > 0) {
+        createDiv(userNum);
+    }
 });
 
 /* CLASSES */
