@@ -39,14 +39,42 @@ btn.addEventListener("click", () => {
 
 /* CLASSES */
 function createDiv(x) {
-    let divs = x*x;
 
-    for (let i = 1; i <= divs; i++) {
-        const newDiv = document.createElement('div');
-        //newDiv.textContent = i;
-        newDiv.setAttribute('class', 'divStyle');
-        container.appendChild(newDiv);
+    for (let i = 0; i < x; i++) {
+        const divCol = document.createElement("div");
+        divCol.classList.add("divColStyle");
+
+        for (let i = 0; i < x; i++) {
+            const divRow = document.createElement("div");
+            divRow.classList.add("divRowStyle");
+            divCol.appendChild(divRow);
+        }
+
+        container.appendChild(divCol);
     }
 }
 
 createDiv(numOfDivs);
+
+/* createDiv(x) function attemp #2
+const cellSize = (container.offSetWidth - 10) / x;
+
+    for (let i = 0; i < x **2 ; i++) {
+        const cell = document.createElement('div');
+        cell.textContent = (i+1);
+        cell.classList.add('divStyle');
+        cell.style.cssText = `width: ${cellSize}px; height: ${cellSize}px;`;
+        container.appendChild(cell);
+    }
+*/
+
+/* createDiv(x) function attempt #1
+let divs = x*x;
+
+for (let i = 1; i <= divs; i++) {
+    const newDiv = document.createElement('div');
+    //newDiv.textContent = i;
+    newDiv.setAttribute('class', 'divStyle');
+    container.appendChild(newDiv);
+} 
+*/
