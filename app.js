@@ -39,11 +39,11 @@ btn.addEventListener("click", () => {
 
 /* CLASSES */
 function createDiv(x) {
-    let divs = x;
+    let divs = x*x;
 
     for (let i = 1; i <= divs; i++) {
         const newDiv = document.createElement('div');
-        newDiv.textContent = i;
+        //newDiv.textContent = i;
         newDiv.setAttribute('class', 'divStyle');
         container.appendChild(newDiv);
     }
