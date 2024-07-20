@@ -50,15 +50,21 @@ function createDiv(x) {
             divCol.appendChild(divRow);
 
             divRow.addEventListener("mouseover", () => {
-                divRow.style.cssText = "background-color: lightblue;";
+                divRow.style.cssText = `background-color: rgb(${chooseColor()});`;
+                divCol.style.cssText = "border: none;";
             });
         }
-
         container.appendChild(divCol);
     }
 }
 
+function chooseColor() {
+    let red = Math.floor(Math.random() * 255) + 1;
+    let green = Math.floor(Math.random() * 255) + 1;
+    let blue = Math.floor(Math.random() * 255) + 1;
 
+    return red + ", " + green + ", " + blue;
+}
 
 createDiv(numOfDivs);
 
