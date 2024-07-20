@@ -1,5 +1,6 @@
 /* VARIABLES */
 let numOfDivs = 16;
+let opacity = 10;
 
 /* SELECTORS */
 const container = document.querySelector(".container");
@@ -39,6 +40,7 @@ btn.addEventListener("click", () => {
 
 /* CLASSES */
 function createDiv(x) {
+    opacity = 9;
 
     for (let i = 0; i < x; i++) {
         const divCol = document.createElement("div");
@@ -50,8 +52,10 @@ function createDiv(x) {
             divCol.appendChild(divRow);
 
             divRow.addEventListener("mouseover", () => {
-                divRow.style.cssText = `background-color: rgb(${chooseColor()});`;
+                divRow.style.cssText = `background-color: rgb(${chooseColor()}); opacity: ${opacity}%;`;
                 divCol.style.cssText = "border: none;";
+                
+                opacity++;
             });
         }
         container.appendChild(divCol);
