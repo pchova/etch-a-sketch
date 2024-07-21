@@ -8,4 +8,4 @@ This is a browser version of something between a Sketchpad and an Etch-A-Sketch.
 
 + Each square's color is a random RGB values with each interaction. In addition, with each interaction opacity goes up. Opacity starts at 10, and with each interaction goes up by 1 to 100. Creating a new grid restarts the opacity.
 
-+ **See a live demo [HERE](pchova.github.io/etch-a-sketch)**
++ **See a live demo [HERE](https://pchova.github.io/etch-a-sketch)**
